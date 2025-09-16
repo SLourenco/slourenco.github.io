@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Intro to Vector Databases"
-date:   2025-06-27 10:00:00 +0100
-categories: database vector embeddings llm
+date:   2025-09-16 10:00:00 +0100
+categories: [database vector embeddings llm]
 ---
 
 A vector database is database that stores its primary data in vector format, commonly allowing searches of the closest results.
@@ -409,11 +409,11 @@ For our exercise, we will be introducing a basic **Inverted File Flat index** (I
 In IVF FLAT we group the data into clusters, using clustering techniques such as K means. 
 When searching for results, the centroid of each cluster is used to determine the candidate cluster to drill down.
 
-![Image with initial search step: checking closes centroid](img/vector-database-index-1.png)
+![Image with initial search step: checking closes centroid](/assets/vector-database-demo/vector-database-index-1.png)
 
 On that cluster, all vectors are processed for our search query.
 
-![Image with second search step: brute force on cluster](img/vector-database-index-2.png)
+![Image with second search step: brute force on cluster](/assets/vector-database-demo/vector-database-index-2.png)
 
 Let's update our code to support this type of index.
 
