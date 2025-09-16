@@ -23,16 +23,15 @@ url: https://sergio-lourenco.com  # the base hostname and protocol for your site
 baseurl: /docs/      # place folder name if the site is served in a subfolder
 
 
-title: Your awesome title
-email: your-email@example.com
+title: Sérgio Lourenço
+email: blog@sergio-lourenco.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I'm Sérgio Lourenço, a software engineer mostly working in web.
+  This is a personal blog to share my explorations on software engineering topics that I find interesting.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+github_username:  SLourenco
 
 # Build settings
 theme: minima
