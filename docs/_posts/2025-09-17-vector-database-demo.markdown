@@ -161,7 +161,7 @@ but the basic principle is that the value I choose for the category code is not 
 Real world use cases will rely on more complex and nuanced functions. If you want to explore using LLMs with these, you can explore the [Open AI docs on embeddings](https://platform.openai.com/docs/guides/embeddings).
 
 ---
-
+<br/>
 Now that I have an embedding function, I can populate my database. 
 I want to do this when I start my program, if the storage is empty, to make it easier for me to test.
 
@@ -347,7 +347,7 @@ as these 2 dimensions are hardly enough to properly represent the movies.
 But the basic idea does not change.
 
 --- 
-
+<br/>
 With the basic functionality down, I want to expand my system a little bit, adding metadata filters and indexes.
 
 # Metadata filters
