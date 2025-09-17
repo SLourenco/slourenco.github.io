@@ -14,7 +14,7 @@ There are 3 main parts of a vector database to think about:
  - Creating a function that turns some data into a vector of embeddings
  - Creating a similarity function, that returns the closest results of a query
 
-To explore a bit more, I'm also adding some metadata filters (not based on vector data) and some indexes to our data.
+To explore a bit more, I'm also adding some metadata filters (not based on vector data) and some indexes to the data.
 
 For this example, I'll create a movie database that can recommend similar movies to the searched one.
 
@@ -251,7 +251,7 @@ For that, I'm going to need a similarity score function to power my search metho
 
 ## Similarity Score
 
-The search function works by finding the closest vectors to our query. 
+The search function works by finding the closest vectors to the query. 
 Distance can be calculated in several ways, with a common one being the [cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity).
 
 Cosine similarity gives the cosine of the angle between 2 n-dimensional vectors.
@@ -274,7 +274,7 @@ pub fn cosine_similarity(a: Vec<usize>, b: Vec<usize>) -> f64 {
 }
 ```
 
-Now I can write a search function. It goes through each stored vector and calculates the distance between it and our query vector.
+Now I can write a search function. It goes through each stored vector and calculates the distance between it and the query vector.
 Then returns the top n results.
 
 ```rust
@@ -355,9 +355,9 @@ With the basic functionality down, I want to expand my system a little bit, addi
 In most cases, the search query will have some filters that are not related with the embeddings vector.
 This filtering would work as it does for other databases, by looking up some column value.
 
-In our example, we might want to limit our similar movies to the ones with the same category or recommend movies within a specific runtime limit.
-Let's say we want to limit the runtime of the results to 180 minutes.
-Our search function would look like:
+I might want to limit the similar movies to the ones with the same category or recommend movies within a specific runtime limit.
+As an example I'll limit the runtime of the results to 180 minutes.
+The search function would look like:
 
 ```rust
 impl Table {
@@ -407,7 +407,7 @@ When searching for results, the centroid of each cluster is used to determine th
 
 ![Image with initial search step: checking closes centroid](/assets/vector-database-demo/vector-database-index-1.png)
 
-On that cluster, all vectors are processed for our search query.
+On that cluster, all vectors are processed for the search query.
 
 ![Image with second search step: brute force on cluster](/assets/vector-database-demo/vector-database-index-2.png)
 
@@ -480,7 +480,7 @@ pub(crate) struct IndexEntry {
 }
 ```
 
-I'll also change our data insertion method, to populate the index on insert:
+I'll also change the data insertion method, to populate the index on insert:
 
 ```rust
 impl Table {
