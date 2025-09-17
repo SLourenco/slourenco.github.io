@@ -162,7 +162,7 @@ Real world use cases will rely on more complex and nuanced functions. If you wan
 
 ---
 
-No that I have an embedding function, I can populate my database. 
+Now that I have an embedding function, I can populate my database. 
 I want to do this when I start my program, if the storage is empty, to make it easier for me to test.
 
 ```rust
